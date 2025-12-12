@@ -20,7 +20,7 @@ NEW_SUB_URL = 'https://arxiv.org/list/cs/new'
 KEYWORD_LIST = ["soft","robot", ]
 
 
-OPENAI_API_KEYS = ['', ]
-DEEPSEEK_API_KEY = [str(os.getenv('OPENAI_API_KEYS'))]  # DeepSeek API密钥
-DEEPSEEK_API_URL = [str(os.getenv('OPENAI_API_URL'))]  # DeepSeek API密钥
-LANGUAGE = "zh"  # zh | en
+OPENAI_API_KEYS = os.getenv('OPENAI_API_KEYS', '').split(',')
+DEEPSEEK_API_KEY = os.getenv('DEEPSEEK_API_KEY', '')
+DEEPSEEK_API_URL = os.getenv('DEEPSEEK_API_URL', '')
+LANGUAGE = os.getenv('LANGUAGE', 'zh')  # zh | en
