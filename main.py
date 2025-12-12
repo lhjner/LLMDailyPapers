@@ -278,7 +278,7 @@ class Reader:
         if DEEPSEEK_API_KEY:
             openai.api_key = DEEPSEEK_API_KEY
             openai.api_base = DEEPSEEK_API_URL
-            model_name = "deepseek-chat"
+            model_name = "deepseek-v3.1"
         else:
             openai.api_key = self.chat_api_list[self.cur_api]
             self.cur_api += 1
@@ -327,8 +327,8 @@ class Reader:
         # 优先使用DeepSeek API（如果配置了的话）
         if DEEPSEEK_API_KEY:
             openai.api_key = DEEPSEEK_API_KEY
-            openai.api_base = "https://api.deepseek.com/v1"
-            model_name = "deepseek-chat"
+            openai.api_base = DEEPSEEK_API_URL
+            model_name = "deepseek-v3.1"
         else:
             openai.api_key = self.chat_api_list[self.cur_api]
             self.cur_api += 1
@@ -378,8 +378,8 @@ class Reader:
         # 优先使用DeepSeek API（如果配置了的话）
         if DEEPSEEK_API_KEY:
             openai.api_key = DEEPSEEK_API_KEY
-            openai.api_base = "https://api.deepseek.com/v1"
-            model_name = "deepseek-chat"
+            openai.api_base = DEEPSEEK_API_URL
+            model_name = "deepseek-v3.1"
         else:
             openai.api_key = self.chat_api_list[self.cur_api]
             self.cur_api += 1
