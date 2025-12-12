@@ -17,7 +17,7 @@ REPO_NAME = 'LLMDailyPapers'
 NEW_SUB_URL = 'https://arxiv.org/list/cs/new'
 
 # Keywords to search
-KEYWORD_LIST = ["soft","robot", ]
+KEYWORD_LIST = ["AI-generated content detection","AI-generated image detection", "Synthetic image / media detection","Multimodal detection"]
 
 
 OPENAI_API_KEYS = os.getenv('OPENAI_API_KEYS', '').split(',')
