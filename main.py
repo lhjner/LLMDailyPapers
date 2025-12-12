@@ -521,7 +521,13 @@ def main(args):
         save_to_file(htmls_body, date_str=title, root_path='./')
         make_github_issue(title=title, body="\n".join(htmls_body), labels=args.filter_keys)
 
-if __name__ == '__main__':    
+if __name__ == '__main__':
+    # 打印环境变量
+    print("\n当前环境变量:")
+    for key, value in os.environ.items():
+        print(f"{key}: {value}")
+    print("\n")
+    
     parser = argparse.ArgumentParser()
     parser.add_argument("--pdf_path", type=str, default='', help="if none, the bot will download from arxiv with query")
     parser.add_argument("--query", type=str, default='all:remote AND all:sensing', help="the query string, ti: xx, au: xx, all: xx,") 
