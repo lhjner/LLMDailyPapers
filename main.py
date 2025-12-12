@@ -452,7 +452,13 @@ def export_to_markdown(text, file_name, mode='w'):
         # 将html格式的内容写入文件
         f.write(text)
 
-def main(args):       
+def main(args):
+    # 打印环境变量
+    print("\n当前环境变量:")
+    for key, value in os.environ.items():
+        print(f"{key}: {value}")
+    print("\n")
+    
     # 创建一个Reader对象，并调用show_info方法
     if args.sort == 'Relevance':
         sort = arxiv.SortCriterion.Relevance
